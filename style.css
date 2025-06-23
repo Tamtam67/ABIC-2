@@ -85,7 +85,7 @@ footer {
 }
 
 .mosaique img {
-  width: 100%;
+  width: 50%;
   height: 160px;
   object-fit: cover;
   border-radius: 8px;
