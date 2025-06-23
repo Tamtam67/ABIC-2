@@ -129,6 +129,7 @@ footer {
   opacity: 0;
   max-height: 100%;
   overflow-y: auto;
+  border-radius: 8px;
 }
 
 .image-container.active img {
