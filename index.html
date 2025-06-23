@@ -43,5 +43,16 @@
   <footer>
     <p>&copy; 2025 Abic T.D.D. Tous droits réservés.</p>
   </footer>
+  <script>
+  function ouvrirPopup(el) {
+    // Ferme les autres
+    document.querySelectorAll('.image-container').forEach(container => {
+      if (container !== el) container.classList.remove('active');
+    });
+
+    // Active ou désactive celui cliqué
+    el.classList.toggle('active');
+  }
+</script>
 </body>
 </html>
