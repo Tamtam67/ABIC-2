@@ -133,7 +133,7 @@ footer {
 
 .image-container.active img {
   transform: scale(0.9) translateX(-50%);
-  border-radius: 8px 0 0 8px;
+  border-radius: 8px;
 }
 
 .image-container.active .texte-explication {
