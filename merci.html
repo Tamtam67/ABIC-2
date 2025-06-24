@@ -11,6 +11,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      margin: 0;
     }
 
     .message {
@@ -20,19 +21,68 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: center;
       color: #002b49;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .message img.logo {
+      width: 100px; /* adapte selon la taille de ton logo */
+      margin-bottom: 20px;
     }
 
     .message h1 {
       color: #d31145;
     }
+
+    .loader {
+      margin: 20px auto;
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #d31145;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .redirect-info {
+      font-size: 0.9em;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    .redirect-info span {
+      font-weight: bold;
+      color: #d31145;
+    }
   </style>
-<meta http-equiv="refresh" content="5;url=index.html">
 </head>
 <body>
   <div class="message">
+    <img src="images/logo.png" alt="Logo" class="logo">
     <h1>Merci !</h1>
-    <p>Votre message a bien été envoyé.<br>Nous vous contacterons rapidement.</p>
+    <p>Votre message a bien été envoyé.<br>Vous allez être redirigé vers l’accueil.</p>
+    <div class="loader"></div>
+    <div class="redirect-info">Redirection dans <span id="countdown">5</span> secondes...</div>
     <a href="index.html">← Retour à la page d’accueil</a>
   </div>
+
+  <script>
+    let seconds = 5;
+    const countdown = document.getElementById('countdown');
+
+    const timer = setInterval(() => {
+      seconds--;
+      countdown.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.href = 'index.html';
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
