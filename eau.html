@@ -23,10 +23,33 @@
     <h1>Traitement de l’eau</h1>
     <p>Le traitement des eaux garantit grâce à nos techniques de dosage une qualité de baignade optimale.</p>
     <p>Nous traitons les eaux de vos hôtels et campings afin de garantir la longévité de vos piscines intérieures et extérieures.</p>
-    <div class="images-eau">
-      <img src="images/piscine_interieure.jpg" alt="Piscine intérieure" />
-      <img src="images/piscine_exterieure.jpg" alt="Piscine extérieure" />
-    </div>
+    <style>
+  .media-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .media-container img,
+  .media-container video,
+  .media-container iframe {
+    max-width: 30%; /* 3 éléments, chacun ~30% */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+</style>
+
+<div class="media-container">
+  <img src="images/piscine_interieure.jpg" alt="Photo 1">
+  <img src="chemin/piscine_exterieure.jpg" alt="Photo 2">
+
+  <video controls>
+    <source src="VIDEO/abictddeau.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la lecture vidéo.
+  </video>
+</div>
   </main>
 
   <footer>
