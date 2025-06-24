@@ -27,6 +27,73 @@
     <p>Email: contact@abic-tdd.com </p>
     <p>Téléphone: +33 7 71 07 26 67 </p>
     <p>Adresse: 64 rue de l'Île Napoléon - 68170 RIXHEIM </p>
+
+    <style>
+  .contact-form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: sans-serif;
+    color: #002b49;
+  }
+
+  .contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #002b49;
+  }
+
+  .contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .contact-form button {
+    background-color: #d31145;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+
+  .contact-form button:hover {
+    background-color: #b00e38;
+  }
+</style>
+
+<form class="contact-form" action="https://formspree.io/f/xpwrygyp" method="POST">
+  <h2>Contactez-nous également via ce formulaire:</h2>
+
+  <label for="name">Nom</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="5" required></textarea>
+
+  <button type="submit">Envoyer</button>
+</form>
   </main>
 
   <footer>
