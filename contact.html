@@ -101,5 +101,12 @@
   <footer>
     <p>&copy; 2025 Abic T.D.D.</p>
   </footer>
+<script>
+  window.addEventListener('pageshow', function (event) {
+    // Si on revient avec l'historique (ex: bouton retour), reset le formulaire
+    const form = document.querySelector('form');
+    if (form) form.reset();
+  });
+</script>
 </body>
 </html>
