@@ -92,8 +92,16 @@
 
   <label for="message">Message</label>
   <textarea id="message" name="message" rows="5" required></textarea>
-
+<!-- Champ honeypot anti-spam -->
+<div style="display: none;">
+  <label>Ne pas remplir ce champ si vous êtes humain :
+    <input type="text" name="honeypot">
+  </label>
+</div>
   <button type="submit">Envoyer</button>
+  <p id="spam-warning" style="color: red; display: none;">
+  Votre message n'a pas été envoyé (détection de spam).
+</p>
 </form>
  
   </main>
@@ -106,6 +114,20 @@
     // Si on revient avec l'historique (ex: bouton retour), reset le formulaire
     const form = document.querySelector('form');
     if (form) form.reset();
+  });
+</script>
+<script>
+  document.querySelector('form').addEventListener('submit', function (e) {
+    const trap = document.querySelector('input[name="honeypot"]');
+    const warning = document.getElementById('spam-warning');
+
+    if (trap && trap.value !== "") {
+      e.preventDefault(); // bloque l'envoi
+      warning.style.display = 'block'; // affiche le message
+      console.log("Spam détecté.");
+    } else {
+      warning.style.display = 'none'; // cache le message s’il n’y a pas de spam
+    }
   });
 </script>
 </body>
