@@ -29,7 +29,32 @@
   "logo": "https://abic-tdd.com/images/logo.png"
 }
 </script>
+<style>
+  body {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* le texte devient blanc pour être lisible */
+    position: relative;
+    min-height: 100vh;
+  }
 
+  /* Superposition assombrie */
+  body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* noir semi-transparent */
+    z-index: 0;
+  }
+
+  /* Tous les éléments du site au-dessus du fond */
+  body > * {
+    position: relative;
+    z-index: 1;
+  }
+</style>
 </head>
 <body>
   <header>
