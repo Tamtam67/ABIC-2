@@ -17,26 +17,29 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-  </header>
-
-  <main>
-    <h1>Contact</h1>
-    <p style="font-weight: bold; font-size: 18px;">
-  👤 GROSSHANS Jonathan
-</p>
-    <p>Email: contact@abic-tdd.com </p>
-    <p>Téléphone: +33 7 71 07 26 67 </p>
-    <p>Adresse: 64 rue de l'Île Napoléon - 68170 RIXHEIM </p>
-
-    <style>
-  .contact-form {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+<style>
+  body {
+    margin: 0;
+    padding: 0;
     font-family: sans-serif;
+    background-color: #f0f0f0;
+  }
+
+  .form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    min-height: 100vh;
+  }
+
+  .contact-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
     color: #002b49;
   }
 
@@ -47,15 +50,16 @@
   }
 
   .contact-form label {
-    display: block;
-    margin-bottom: 5px;
     font-weight: bold;
+    margin-top: 10px;
+    display: block;
   }
 
   .contact-form input,
   .contact-form textarea {
     width: 100%;
     padding: 10px;
+    margin-top: 5px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -66,12 +70,12 @@
     background-color: #d31145;
     color: white;
     border: none;
-    padding: 12px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
+    padding: 12px;
     width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
     transition: background-color 0.3s ease;
   }
 
@@ -79,21 +83,35 @@
     background-color: #b00e38;
   }
 </style>
+  </header>
 
-<form class="contact-form" action="https://formspree.io/f/xpwrygyp" method="POST">
-  <h2>Contactez-nous également via ce formulaire:</h2>
+  <main>
+    <h1>Contact</h1>
+    <p style="font-weight: bold; font-size: 18px;">
+  👤 GROSSHANS Jonathan
+</p>
+    <p>Email: contact@abic-tdd.com </p>
+    <p>Téléphone: +33 7 71 07 26 67 </p>
+    <p>Adresse: 64 rue de l'Île Napoléon - 68170 RIXHEIM </p>
+    
+<div class="form-wrapper">
+  <form class="contact-form" action="https://formspree.io/f/xpwrygyp" method="POST">
+    <h2>Contactez-nous également via ce formulaire: </h2>
 
-  <label for="name">Nom</label>
-  <input type="text" id="name" name="name" required>
+    <label for="name">Nom</label>
+    <input type="text" id="name" name="name" required>
 
-  <label for="email">Email</label>
-  <input type="email" id="email" name="email" required>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
 
-  <label for="message">Message</label>
-  <textarea id="message" name="message" rows="5" required></textarea>
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
 
-  <button type="submit">Envoyer</button>
-</form>
+    <button type="submit">Envoyer</button>
+  </form>
+</div>
+
+   
   </main>
 
   <footer>
