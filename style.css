@@ -113,6 +113,22 @@ footer {
   z-index: 1;
   border-radius: 10px;
 }
+.mosaique-ligne {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.colonne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
 .image-container {
   position: relative;
   overflow: hidden;
