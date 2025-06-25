@@ -6,16 +6,18 @@ body {
 }
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1000; /* pour rester au-dessus du contenu */
+  left: 0;
+  right: 0;
+  z-index: 1000;
   background-color: #0077cc;
   color: white;
   padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* ombre douce */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .logo {
@@ -37,7 +39,7 @@ nav ul li a {
 }
 
 main {
-  padding: 20px;
+  padding: 100px 20px 20px 20px; /* top padding pour éviter que le contenu passe derrière */
 }
 
 .accueil {
