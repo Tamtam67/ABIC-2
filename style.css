@@ -5,12 +5,6 @@ body {
   color: #003366;
 }
 
-html, body {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
 header {
   background-color: #0077cc;
   color: white;
@@ -40,7 +34,6 @@ nav ul li a {
 
 main {
   padding: 20px;
-  flex: 1;
 }
 
 .accueil {
@@ -53,25 +46,18 @@ main {
 
 .onglet {
   display: inline-block;
-  margin: 20px;
-  padding: 20px 50px;
-  font-size: 1.3rem;
-  font-weight: 600;
-  background: linear-gradient(145deg, #0077cc, #005fa3);
+  margin: 150px;
+  padding: 15px 30px;
+  background-color: #005fa3;
   color: white;
   text-decoration: none;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 119, 204, 0.35);
-  transition: all 0.3s ease;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  border-radius: 8px;
 }
 
 .onglet:hover {
-  background: linear-gradient(145deg, #0099ff, #0077cc);
+  background-color: #004c85;
   transform: scale(1.05);
-  box-shadow: 0 12px 25px rgba(0, 119, 204, 0.45);
-  filter: none;
+  filter: brightness(1.1);
   z-index: 1;
 }
 
@@ -87,6 +73,7 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
+  margin-top: 30px;
 }
 
 .mosaique {
