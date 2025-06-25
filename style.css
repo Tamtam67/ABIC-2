@@ -5,6 +5,12 @@ body {
   color: #003366;
 }
 
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 header {
   background-color: #0077cc;
   color: white;
@@ -34,6 +40,7 @@ nav ul li a {
 
 main {
   padding: 20px;
+  flex: 1;
 }
 
 .accueil {
